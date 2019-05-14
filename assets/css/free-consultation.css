@@ -1,0 +1,10 @@
+.free-consultation{
+    padding:50px 0;
+    background:#3d8fc2;
+    color:white;
+}
+@media(max-width: 1100px){
+    .free-consultation .text-bigmed{
+        font-size: 2em;
+    }
+}

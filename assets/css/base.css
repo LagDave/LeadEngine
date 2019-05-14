@@ -38,6 +38,9 @@ button:focus {
 .text-big {
   font-size: 4em;
 }
+.text-bigmed{
+  font-size: 3em;
+}
 .text-medium {
   font-size: 2em;
 }
@@ -68,7 +71,7 @@ button:focus {
   color: #3d8fc2;
 }
 .text-grey {
-  color: #888;
+  color: #555;
 }
 .text-orange {
   color: orange;
@@ -128,16 +131,11 @@ button:focus {
 .btn-blue {
   background: #3d8fc2;
 }
+.btn-white{
+  background: white;
+  color:#555
+}
 .btn-transparent {
   background: transparent;
 }
 /* BUTTON */
-
-footer {
-  background: linear-gradient(45deg, dodgerblue, royalblue 30%);
-  padding: 20px 0;
-}
-footer p {
-  margin: 0;
-  padding: 10px 0;
-}
