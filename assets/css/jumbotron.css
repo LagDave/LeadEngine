@@ -1,0 +1,273 @@
+/* Scroll NAV */
+.scroll-nav {
+  background: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  transform: translateY(-100px);
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 0px;
+  overflow: hidden;
+  display: block;
+}
+.scroll-nav .brand img {
+  width: 250px;
+}
+.scroll-nav .container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+}
+.scroll-nav .container .nav-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+.scroll-nav .active {
+  color: white !important;
+}
+.scroll-nav .container .nav-items .nav-item {
+  text-align: center;
+  color: #888;
+}
+.scroll-nav .container .nav-items .nav-item:hover {
+  color: #3d8fc2;
+}
+.scroll-nav .container .contacts {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
+  justify-items: end;
+  align-items: baseline;
+  color: #888;
+  font-size: 0.8em;
+}
+
+@media (max-width: 1150px) {
+  .scroll-nav .brand img {
+    width: 180px;
+  }
+  .scroll-nav .container .contacts,
+  .scroll-nav .container .nav-items {
+    display: none;
+  }
+  .scroll-nav .container {
+    display: flex;
+  }
+  .scroll-nav .container .hamburger {
+    margin-left: auto;
+  }
+}
+
+/* JUMBOTRON */
+.jumbotron {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../images/jb_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  color: white !important;
+
+  border-top: 10px solid #3d8fc2;
+
+  display: flex;
+  flex-direction: column;
+}
+.jumbotron .container {
+  display: flex;
+  flex-direction: column;
+}
+/* Jumbo Navigation Component */
+.jumbotron nav {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 20px 0;
+}
+.jumbotron nav .brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.jumbotron nav .brand img {
+  width: 250px;
+}
+.jumbotron nav .nav-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+.jumbotron nav .nav-items .nav-item {
+  text-align: center;
+  color: white;
+}
+
+.active {
+  background: #3d8fc2;
+  padding: 10px 0;
+  transition: 0.2s;
+  border-radius: 30px;
+}
+.active:hover {
+  color: white !important;
+  transform: scale(1.05, 1.05);
+}
+
+.jumbotron nav .nav-items .nav-item:hover {
+  color: #3d8fc2;
+}
+.jumbotron nav .contacts {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  justify-items: end;
+  align-items: baseline;
+  margin-bottom: 28px;
+}
+
+/* Jumbo Main Container */
+.jumbotron .jumbo-main-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding-bottom: 100px;
+}
+.jumbotron .jumbo-main-container .jumbo-left-hand {
+}
+.jumbo-divider {
+  width: 3px;
+  height: 150px;
+  background: white;
+}
+.jumbotron .jumbo-main-container .jumbo-right-hand {
+  min-width: 500px;
+}
+
+.jumbo-footer {
+  background: #32729bc7;
+
+  margin-top: auto;
+  padding: 10px 0;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.jumbo-footer img {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  cursor: pointer;
+
+  animation: shake 0.5s both infinite alternate;
+}
+.jumbo-footer p {
+  letter-spacing: 2px;
+}
+
+.hamburger {
+  justify-self: end;
+  padding: 0;
+  margin: 0;
+  transform: scale(1.5, 1.5);
+  display: none;
+}
+
+.nav-items-mobile {
+  background: #3d8fc2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: 0.1s;
+  position: fixed;
+  top: 90px;
+  right: 40px;
+  z-index: 0;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  height: 150px;
+  padding: 10px;
+  opacity: 0;
+  transform: translateY(-2000px);
+}
+.nav-items-mobile .nav-item {
+  transition: 0.2s;
+  color: white !important;
+}
+.nav-items-mobile .nav-item:hover {
+  color: #3d8fc2;
+  padding-left: 5px;
+  border-left: 2px solid white;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fadeDownDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  99% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(2000px);
+  }
+}
+
+@media (max-width: 1100px) {
+  .jumbo-right-hand p:nth-child(1),
+  .jumbo-divider,
+  .jumbotron nav .nav-items,
+  .jumbotron nav .contacts,
+  .jumbo-right-hand {
+    display: none !important;
+  }
+  .jumbotron .jumbo-main-container {
+    grid-template-columns: 1fr;
+  }
+  .jumbo-left-hand p {
+    text-align: center !important;
+  }
+  .jumbotron .hr-med {
+    height: 50px;
+  }
+  .jumbotron nav {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hamburger {
+    display: block;
+  }
+  .jumbo-left-hand p:nth-child(1) {
+    font-size: 3em;
+  }
+  .jumbotron nav .brand img {
+    width: 180px;
+  }
+}

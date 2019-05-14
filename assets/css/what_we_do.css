@@ -1,0 +1,36 @@
+.what_we_do{
+    padding:50px 0;
+}
+.what_we_do .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+.what_we_do .wwd-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.what_we_do .wwd-img img{
+    width:80%;
+}
+
+@media(max-width:1100px){
+    .what_we_do .container{
+        grid-template-columns: 1fr;
+    }
+    .what_we_do .container .wwd-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+}
+
+@media(max-width: 960px){
+    .what_we_do .wwd-img img{
+        width:100%;
+    }
+}
