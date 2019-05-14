@@ -12,18 +12,8 @@
     align-items: center;
 
 }
-.companies-iconset .container .iconset .icon{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.10);
-    height: 200px;
-    width:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-}
 .companies-iconset .container .iconset .icon img{
     width: 100%;
-
 }
 @media(max-width:1100px){
     .companies-iconset .container .iconset{
@@ -39,8 +29,11 @@
         grid-template-columns:1fr 1fr 1fr;
 
     }
-    .companies-iconset .container .iconset .icon{
-        height: 150px;
-    }
-}
 
+}
+@media(max-width: 600px){
+    .companies-iconset .container .iconset{
+          grid-template-columns:1fr 1fr ;
+
+      }
+}

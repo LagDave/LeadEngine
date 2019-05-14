@@ -4,6 +4,7 @@
 .benefits .container{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
     grid-gap: 50px;
 }
 .benefits .container div{
@@ -13,6 +14,8 @@
 }
 .benefits .container div img{
     width: 100%;
+    border-radius: 100000px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.10);
 }
 .benefits .container .benefits-cards{
     display: grid;
