@@ -103,6 +103,14 @@
   background: #eee;
 }
 
+.pricing_component .testimonials .container{
+  grid-template-columns: 1fr !important;
+}
+.pricing_component .testimonials .testimonial .testimonial-content{
+  max-width: 600px;
+}
+
+
 @media (max-width: 960px) {
   .pricing_component .pricing-con1,
   .pricing_component .pricing-con2 {
